@@ -219,7 +219,7 @@ section {
 }
 
 .project_site>a {
-    cursor: url(/img/scroll_cusor.png) 2 2, auto;
+    cursor: url(img/scroll_cusor.png) 2 2, auto;
 }
 
 .project_site img {

@@ -1,0 +1,350 @@
+/* 폰트 */
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+.audiowide-regular {
+    font-family: "Audiowide", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'GeekbleMalang2WOFF2';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/GeekbleMalang2WOFF2.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Ownglyph_ParkDaHyun';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2411-3@1.0/Ownglyph_ParkDaHyun.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+}
+
+html,
+body {
+    scroll-behavior: smooth;
+}
+
+/* ================================= */
+#logo {
+    position: fixed;
+    bottom: 5%;
+    right: 3%;
+    width: 100px;
+    height: 100px;
+    background-color: #ffd549;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    font-family: "Audiowide", serif;
+    animation: logo_move 2s infinite;
+    z-index: 50;
+}
+
+@keyframes logo_move {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+#logo:hover {
+    background-color: #2c88ff;
+    animation: none;
+    color: #fff0c6;
+}
+
+#logo img {
+    width: 60%;
+}
+
+#sdie_menu {
+    width: 100px;
+    position: fixed;
+    bottom: 18%;
+    right: 3%;
+    background-color: #ffd549;
+    border-radius: 10px;
+    z-index: 50;
+}
+
+#sdie_menu>ul {
+    list-style: none;
+    text-align: right;
+}
+
+#sdie_menu>ul>li>a {
+    display: block;
+    padding: 8px;
+    font-family: "Audiowide", serif;
+}
+
+#sdie_menu>ul>li>a:hover {
+    color: #2c88ff;
+}
+
+/* ============================= */
+
+#wrap {
+    height: 100%;
+    background-color: #fff0c6;
+}
+
+header {}
+
+section {
+    margin: 0 auto;
+    width: 100%;
+}
+
+#home {
+    height: 100vh;
+}
+
+.container {
+    max-wisth: 100%;
+    position: absolute;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+}
+
+.title {
+    letter-spacing: 10px;
+    font-weight: 800;
+    color: transparent;
+    font-size: 10em;
+    background-color: #8bbdff;
+    text-shadow: 0.05em 0.05em #2c88ff;
+    background-position: 30% 10%;
+    -webkit-background-clip: text;
+    text-align: center;
+    font-family: "Audiowide", serif;
+}
+
+.lg {
+    font-weight: 300;
+    font-size: 8em;
+}
+
+
+
+#project {
+    background-color: #8bbdff;
+    overflow: hidden;
+    /* height: 300vh; */
+}
+
+.pj_title {
+    width: 90%;
+    /* height: 15%; */
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 4.5em;
+    padding: 5% 3%;
+    margin: 0 4%;
+    font-family: "Audiowide", serif;
+    color: #fff0c6;
+    text-shadow: 0.09em 0.09em #eba946;
+}
+
+.pj_title::after {
+    content: "";
+    flex-grow: 1;
+    background: #ffc671;
+    height: 2px;
+    font-size: 0px;
+    line-height: 0px;
+    margin-left: 50px;
+}
+
+.project_box {
+    margin: 0 auto;
+    max-width: 1200px;
+    max-height: 800px;
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 30px;
+    margin-bottom: 7%;
+    box-shadow: 1em 1em #ffc671;
+}
+
+.project_site {
+    width: 30%;
+    max-height: 650px;
+    overflow: scroll;
+    border-top-left-radius: 30px;
+    -ms-overflow-style: none;
+    /* IE */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+.project_site::-webkit-scrollbar {
+    display: none;
+    /* Chrome, Safari, Opera, Edge */
+}
+
+.project_site>a {
+    cursor: url(/img/scroll_cusor.png) 2 2, auto;
+}
+
+.project_site img {
+    width: 100%;
+}
+
+.project_index {
+    width: 50%;
+    height: 100%;
+    /* max-width: 600px; */
+    max-height: 650px;
+    background-color: #e6e9ec;
+    border-radius: 30px;
+}
+
+.project_index_title {
+    height: 15%;
+    text-align: center;
+    padding: 30px;
+    font-family: 'GeekbleMalang2WOFF2';
+    font-size: 2.3em;
+    border-bottom: 2px solid black;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.project_index_tag {
+    padding: 5% 0px;
+    height: 40%;
+    background-color: #ffd549;
+}
+
+.project_index_tag>ul {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 80%;
+}
+
+.project_index_tag>ul>li {
+    padding: 2.5% 4%;
+    background-color: #ffffff;
+    border-radius: 20px;
+    margin: 10px;
+    font-family: 'Ownglyph_ParkDaHyun';
+    font-family: "Audiowide", serif;
+    font-size: 1.3em;
+}
+
+.project_index_Contribution {
+    height: 20%;
+    background-color: #eba946;
+}
+
+.project_index_Contribution>ul {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.project_index_Contribution>ul>li {
+    width: 30%;
+    text-align: center;
+    font-family: 'Ownglyph_ParkDaHyun';
+    font-size: 1.8em;
+}
+
+.project_index_Contribution>ul>li>div>img {
+    max-width: 90%;
+}
+
+.project_index_button {
+    height: 15%;
+    margin: 0 auto;
+    width: 80%;
+    background-color: #7198ca;
+}
+
+.project_btn_site>a {
+    display: inline-block;
+    padding: 3% 5%;
+    text-align: center;
+    background-color: #8bbdff;
+    border-radius: 15px;
+    font-size: 2em;
+    font-family: 'Ownglyph_ParkDaHyun';
+}
+
+/* =========== */
+#about {
+    background-color: #fff0c6;
+    width: 100%;
+    height: 100vh;
+}
+
+.ab_title {
+    width: 90%;
+    /* height: 15%; */
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    font-size: 4.5em;
+    padding: 5% 3%;
+    margin: 0 4%;
+    font-family: "Audiowide", serif;
+    color: #8bbdff;
+    text-shadow: 0.09em 0.09em #2c88ff;
+}
+
+.ab_title::after {
+    content: "";
+    flex-grow: 1;
+    background: #2c88ff;
+    height: 2px;
+    font-size: 0px;
+    line-height: 0px;
+    margin-left: 50px;
+}
+
+
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #7198ca;
+    text-align: center;
+    line-height: 5vh;
+}

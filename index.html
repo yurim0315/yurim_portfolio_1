@@ -1,249 +1,144 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="index.css">
-  <script src="jquery-3.7.1.js"></script>
-  <!-- 슬라이드 -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <!-- 구글 폰트 -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik+Bubbles&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/aos.css">
+    <script src="js/aos.js"></script>
+    <script>
 
-  <script>
-    $(function () {
-      // contact 헤더 폰트 색상 변경
-      $('#contact').mouseenter(function () {
-        $('header').css('color', 'white');
-      });
-      $('#contact').mouseleave(function () {
-        $('header').css('color', '#333333');
-      });
+    </script>
 
-      // 포트폴리오 슬라이드
-      var swiper = new Swiper(".mySwiper", {
-        slidesPerView: "auto",
-        centeredSlides: true,
-        spaceBetween: 30,
-        pagination: {
-          el: ".swiper-pagination",
-          type: "progressbar",
-        },
-      });
-
-      // test
-      // $(".about_bg").addClass("active");
-      // setInterval(function(){$(".about_bg").addClass("active2");});
-
-      //  about 클릭시 내려오기 + 안에 컨테이너 하나씩 보이기
-      $('.container').hide();
-      $('.about_bg').click(function () {
-        $(this).addClass('clicked');
-        $('.container').slideDown(300);
-        $('.container>div').hide();
-        $('.container>div:first-child').show(1000).next('div').delay(1000).show(1000)
-          .next('div').delay(2000).show(1000).next('div').delay(3000).show(1000);
-        return false;
-      });
-      // about에서 커서 치웠을 때 이벤트
-      $('#portfolio, #contact').mouseenter(function () {
-        $('.container').hide(1000);
-        $('.about_bg').removeClass('clicked');
-      });
-
-
-      // 쿨릭시 사운드 효과 참고용
-      // function play() { 
-      // var audio = document.getElementById('audio_play'); 
-      // if (audio.paused) { 
-      //     audio.play(); 
-      // }else{ 
-      //     audio.pause(); 
-      //     audio.currentTime = 0 
-      // } }
-
-      $(document).ready(function () {
-        // 카드 클릭 시 회전
-        $('.skill_box > ul > li').click(function () {
-          var card = $(this).find('.card');
-          card.toggleClass('flip');
-        });
-      });
-
-    });
-  </script>
-
-  <title>CHOI_YURIM_PORTFOLIO</title>
+    <title>CHOIYURIM_PORTPLIO</title>
 </head>
 
 <body>
-  <div id="wrap">
-    <!-- <div class="bar_side"></div> -->
-    <header>
-      <div id="logo"><a href="#home"><img src="img/logo2.png" alt="logo"></a></div>
-      <nav>
-        <ul id="top_menu">
-          <li><a href="#home">HOME</a> <img src="img/menu_click.png" alt="click_img" class="menu_click"></li>
-          <li><a href="#portfolio">PORTFOLIO</a> <img src="img/menu_click.png" alt="click_img" class="menu_click"></li>
-          <li><a href="#about">ABOUT ME</a> <img src="img/menu_click.png" alt="click_img" class="menu_click"></li>
-          <li><a href="#contact">CONTACT</a><img src="img/menu_click.png" alt="click_img" class="menu_click"></li>
+    <script>
+        AOS.init();
+    </script>
+    <div id="logo"><a href="#">
+            <a href="mailto:yurim1313@naver.com" title="mail!">
+                <p>contact!</p><img src="img/logo_black.png" alt="logo">
+            </a>
+        </a></div>
+    <div id="sdie_menu">
+        <ul>
+            <li><a href="#home">HOME</a></li>
+            <li><a href="#project">PROJECT</a></li>
+            <li><a href="#about">ABOUT</a></li>
         </ul>
-      </nav>
-    </header>
-    <section id="home">
+    </div>
+    <div id="wrap">
+        <header>
 
-      <div class="home_box1">
-        <h1 class="title">
-          <span>This is</span>
-          <span>YURIM'S</span>
-          <span>PORTPOLIO!</span>
-        </h1>
-      </div>
-      <!-- <div class="home_box2"><a href="#portfolio"><img src="img/home_button.png" alt="home_button"></a></div> -->
-    </section>
-
-    <section id="portfolio">
-      <!-- Swiper -->
-      <div class="swiper mySwiper">
-        <div class="swiper-pagination"></div>
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">Slide 1</div>
-          <div class="swiper-slide">Slide 2</div>
-          <div class="swiper-slide">Slide 3</div>
-          <div class="swiper-slide">Slide 4</div>
-          <div class="swiper-slide">Slide 5</div>
-          <div class="swiper-slide">Slide 6</div>
-          <div class="swiper-slide">Slide 7</div>
-          <div class="swiper-slide">Slide 8</div>
-          <div class="swiper-slide">Slide 9</div>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <img src="img/about_bg.png" alt="bg" class="about_bg">
-      <div class="container">
-        <div class="about_con1">
-          <img src="img/me.gif" alt="me">
-        </div>
-        <div class="about_con2">
-          <div class="skill_box">
-            <h1>SKILL</h1>
-            <ul>
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill1.png" alt="html">
-                  </div>
-                  <div class="back">
-                    <p>웹 표준 준수,</p>
-                  </div>
+        </header>
+        <main>
+            <section id="home">
+                <div class="container">
+                    <div class="title" data-aos="slide-right" data-aos-duration="1500">CHOI_YURIM</div>
+                    <div class="title lg" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">PORTFOLIO
+                    </div>
                 </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill2.png" alt="css">
-                  </div>
-                  <div class="back">
-                  </div>
+            </section>
+            <section id="project">
+                <div class="pj_title" data-aos="slide-right" data-aos-duration="2000">
+                    PROJECT.
                 </div>
-              </li>
 
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill3.png" alt="자바스크립트">
-                  </div>
-                  <div class="back">
-                  </div>
+                <div class="project_box" data-aos="fade-in" data-aos-duration="2000">
+                    <div class="project_site">
+                        <a href="#"><img src="img/123456.png" alt=""></a>
+                    </div>
+                    <div class="project_index">
+                        <div class="project_index_title" data-aos="slide-up" data-aos-duration="3300">
+                            <span>롬앤 사이트 리뉴얼</span>
+                        </div>
+                        <div class="project_index_tag" data-aos="slide-up" data-aos-duration="3600">
+                            <ul>
+                                <li>#HTML</li>
+                                <li>#CSS</li>
+                                <li>#jquary</li>
+                                <li>#반응형</li>
+                                <li>#PC</li>
+                                <li>#phone</li>
+                                <li>#FullPage.js</li>
+                            </ul>
+                        </div>
+                        <div class="project_index_Contribution" data-aos="slide-up" data-aos-duration="3700">
+                            <ul>
+                                <li>
+                                    <span>기획</span>
+                                    <div>100%</div>
+                                </li>
+                                <li>
+                                    <span>퍼블리싱</span>
+                                    <div>100%</div>
+                                </li>
+                                <li>
+                                    <span>디자인</span>
+                                    <div>80%</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="project_index_button">
+                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/">site.</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </li>
 
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill4.png" alt="제이쿼리">
-                  </div>
-                  <div class="back">
-                  </div>
+                <div class="project_box" d data-aos="fade-in" data-aos-duration="2000">
+                    <div class="project_site">
+                        <a href="#"><img src="img/123456.png" alt=""></a>
+                    </div>
+                    <div class="project_index">
+                        <div class="project_index_title">
+                            <span>국민은행 리뉴얼</span>
+                        </div>
+                        <div class="project_index_tag">
+                            <ul>
+                                <li>#HTML</li>
+                                <li>#CSS</li>
+                                <li>#Javascript</li>
+                                <li>#PC</li>
+                            </ul>
+                        </div>
+                        <div class="project_index_Contribution" data-aos="slide-up" data-aos-duration="3700">
+                            <ul>
+                                <li>
+                                    <span>기획</span>
+                                    <div>80%</div>
+                                </li>
+                                <li>
+                                    <span>퍼블리싱</span>
+                                    <div>80%</div>
+                                </li>
+                                <li>
+                                    <span>디자인</span>
+                                    <div>80%</div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="project_index_button">
+                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/">site.</a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </li>
-            </ul>
 
-            <h1>TOOL</h1>
-            <ul>
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill5.png" alt="깃">
-                  </div>
-                  <div class="back">
-                  </div>
+            </section>
+            <section id="about">
+                <div class="ab_title" data-aos="slide-right" data-aos-duration="2000">
+                    ABOUT.
                 </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill6.png" alt="깃허브">
-                  </div>
-                  <div class="back">
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-            <h1>DESIGN</h1>
-            <ul>
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill7.png" alt="">
-                  </div>
-                  <div class="back">
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill8.png" alt="">
-                  </div>
-                  <div class="back">
-                  </div>
-                </div>
-              </li>
-
-              <li>
-                <div class="card">
-                  <div class="front">
-                    <img src="img/skill/skill9.png" alt="">
-                  </div>
-                  <div class="back">
-                  </div>
-                </div>
-              </li>
-            </ul>
-
-          </div>
-        </div>
-
-        <div class="about_con3"></div>
-      </div>
-    </section>
-
-    <section id="contact"></section>
-    <footer>
-      <p>ⓒ 2024. CHOIYURIM All Rights Reserved.</p>
-    </footer>
-  </div>
+            </section>
+        </main>
+        <footer>
+            Copyright 2024. CHOI_YURIM All rights reserved.
+        </footer>
+    </div>
 </body>
 
 </html>

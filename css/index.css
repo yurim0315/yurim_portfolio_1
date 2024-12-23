@@ -23,9 +23,19 @@
     font-style: normal;
 }
 
+  
+
+/* 픽셀 폰트 */
 @font-face {
     font-family: 'DepartureMono-Regular';
     src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2409-1@1.0/DepartureMono-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+    unicode-range: U+0041-005A, U+0061-007A, U+0030-0039, U+0020-002F, U+003A-0040, U+005B-0060, U+007B-007E;
+}
+@font-face {
+    font-family: 'dalmoori';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_2102-01@1.0/dalmoori.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
@@ -224,6 +234,7 @@ section {
     text-shadow: 0.05em 0.05em #2c88ff;
     background-position: 30% 10%;
     -webkit-background-clip: text;
+    background-clip : text;
     text-align: center;
     font-family: 'DepartureMono-Regular';
 }
@@ -311,16 +322,31 @@ section {
     margin-bottom: 7%;
     box-shadow: 1em 1em #ffc671;
 }
+.project_box_left {
+    width: 45%;  
+    height: 650px; 
+}
 
-.project_site {
-    width: 30%;
-    max-height: 650px;
-    overflow: scroll;
+.project_site {  
+    height: 60%;
+    overflow: hidden;
+    position: relative;
+    /* overflow: scroll;
     border-top-left-radius: 30px;
     -ms-overflow-style: none;
-    /* IE */
-    scrollbar-width: none;
-    /* Firefox */
+    scrollbar-width: none; */
+
+}
+.project_site>div{    
+    width: 80%;
+    position: absolute;
+    top: 15%;
+    left: 10%;
+    z-index: -10;
+    animation: site_ani 5s infinite;
+}
+@keyframes site_ani {
+    100% {top: -200%;}
 }
 
 .project_site::-webkit-scrollbar {
@@ -336,8 +362,34 @@ section {
     width: 100%;
 }
 
+
+.project_index_button {
+    height: 17%;
+    padding: 3% 0px;
+    margin: 0 auto;
+    width: 80%;
+    /* background-color: #7198ca; */
+}
+
+.project_btn_site>a {
+    display: inline-block;
+    width: 30%;
+    padding: 3% 0;
+    text-align: center;
+    background-color: rgb(255, 147, 147);
+    border-radius: 15px;
+    font-size: 2em;
+    font-family: 'Ownglyph_ParkDaHyun';
+    transition: 1s;
+}
+.project_btn_site>a:hover {
+    border: none;
+    background-color: #ffc671;
+}
+
+/* 오른쪽 */
 .project_index {
-    width: 50%;
+    width: 43%;
     height: 100%;
     /* max-width: 600px; */
     max-height: 650px;
@@ -356,16 +408,26 @@ section {
     margin: 0 auto;
     width: 80%;
 }
+.project_index_sub {
+    /* height: 15%; */
+    width: 80%; 
+    margin: 0 auto;
+}
+.project_index_sub>ul>li {
+    padding: 3%;
+    font-size: 1.2em;
+    font-family: 'GeekbleMalang2WOFF2', "Audiowide";
+}
 
 .project_index_tag {
-    height: 25%;
+    /* height: 25%; */
     padding: 3% 0px;
 }
 
 .project_index_tag>ul {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    margin: 2% auto;
     width: 80%;
 }
 
@@ -374,12 +436,12 @@ section {
     background-color: #ffffff;
     border-radius: 20px;
     margin: 10px;
-    font-family: "Audiowide", 'GeekbleMalang2WOFF2';
+    font-family: 'DepartureMono-Regular','dalmoori';
     font-size: 1em;
 }
 
 .project_index_Contribution {
-    height: 38%;
+    /* height: 38%; */
 }
 
 .project_index_Contribution>ul {
@@ -392,13 +454,14 @@ section {
 .project_index_Contribution>ul>li {
     width: 35%;
     text-align: center;
-    font-family: "Audiowide", 'GeekbleMalang2WOFF2';
-    font-size: 1.8em;
+    
 }
 
 .project_index_Contribution>ul>li>span {
     display: block;
     padding: 10% 0;
+    font-family: 'GeekbleMalang2WOFF2';
+    font-size: 1.6em;
 }
 
 .project_index_Contribution>ul>li>div {
@@ -423,6 +486,8 @@ section {
     top: 38%;
     left: 0;
     color: #f3faff;
+    font-family: 'DepartureMono-Regular';
+    font-size: 1.8em;
 }
 
 .project_progress_inner {
@@ -455,35 +520,13 @@ section {
     max-width: 100%;
 }
 
-.project_index_button {
-    height: 17%;
-    padding: 3% 0px;
-    margin: 0 auto;
-    width: 80%;
-    /* background-color: #7198ca; */
-}
 
-.project_btn_site>a {
-    display: inline-block;
-    width: 30%;
-    padding: 3% 0;
-    text-align: center;
-    background-color: white;
-    border-radius: 15px;
-    font-size: 2em;
-    font-family: 'Ownglyph_ParkDaHyun';
-    transition: 1s;
-}
-.project_btn_site>a:hover {
-    border: none;
-    background-color: #ffc671;
-}
 
 /* =========== */
 #about {
     background-color: #fff0c6;
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .ab_title {
@@ -509,6 +552,99 @@ section {
     line-height: 0px;
     margin-left: 50px;
 }
+
+/* 스킬 박스 */
+.skill_box {
+    width: 30%;
+    margin-left: 10%;
+    margin-bottom: 5%;
+  }
+  
+  .skill_box>h1 {
+    font-size: 2vw;
+    padding: 2%;
+    font-family: 'DepartureMono-Regular';
+    color: #2c88ff;
+    border-bottom: 2px solid #2c88ff;
+  }
+  
+  .skill_box>ul {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    padding-bottom: 10px;
+  }
+  
+  .skill_box>ul>li {
+    width: 25%;
+    margin: 3% 2%;
+  }
+  
+  .card {
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px solid #1A58A3;
+    perspective: 1000px;    
+  }
+  
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  
+  .back p {
+    font-size: 1vw;
+    position: relative;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+  }
+  
+  .back::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    opacity: 0.8;
+    background-color: #1A58A3;
+    background-image: url(../img/skill/skill_back.png);
+    background-size: contain;
+  }
+  
+  .front img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .back {
+    transform: rotateY(180deg);
+    /* 뒷면은 180도 회전하여 보이지 않도록 설정 */
+  }
+  
+  /* 클릭 시 카드 회전 */
+  .card.flip {
+    transform: rotateY(180deg);
+    /* 회전시키기 */
+  }
+  
+  .skill_box>ul>li>img {
+    display: block;
+    margin: 15px auto;
+    max-width: 90%;
+  }
 
 
 footer {

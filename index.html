@@ -7,8 +7,23 @@
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/aos.css">
     <script src="js/aos.js"></script>
+    <script src="./js/jquery-3.7.1.js"></script>
     <script>
+        $(function () {
+            // 카드 뒤집는 효과
+            $(document).ready(function () {
+                // 카드 클릭 시 회전
+                $('.skill_box > ul > li').click(function () {
+                    var card = $(this).find('.card');
+                    card.toggleClass('flip');
+                });
+            });
 
+            // 카드 클릭시 설명 뜸
+            $('.card').click(function () {
+                $('.card_inner ').show();
+            });
+        });
     </script>
 
     <title>CHOIYURIM_PORTPLIO</title>
@@ -19,10 +34,12 @@
         AOS.init();
 
         // intro 후 home 자동 스크롤
-        setTimeout(function () {
-            const targetElement = document.getElementById('home');
-            targetElement.scrollIntoView({ behavior: 'smooth' });
-        }, 3000);
+        // setTimeout(function () {
+        //     const targetElement = document.getElementById('home');
+        //     targetElement.scrollIntoView({ behavior: 'smooth' });
+        // }, 3000);
+
+
 
 
     </script>
@@ -53,7 +70,8 @@
             <section id="home">
                 <div class="container">
                     <div class="title" data-aos="slide-right" data-aos-duration="1500">CHOI_YURIM</div>
-                    <div class="title lg" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">-PORTFOLIO-
+                    <div class="title lg" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">
+                        -PORTFOLIO-
                     </div>
                 </div>
             </section>
@@ -64,12 +82,27 @@
                 </div>
 
                 <div class="project_box" data-aos="fade-in" data-aos-duration="2000">
-                    <div class="project_site">
-                        <a href="#"><img src="img/romend_web.png" alt=""></a>
+                    <div class="project_box_left">
+                        <div class="project_site">
+                            <a href="#"><img src="img/romend_web.png" alt="romend_web"></a>
+                        </div>
+                        <div class="project_site_sub">
+                            <div class="project_index_button">
+                                <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/"
+                                        target="_blank">site ></a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                     <div class="project_index">
                         <div class="project_index_title" data-aos="slide-up" data-aos-duration="3300">
                             <span>롬앤 사이트 리뉴얼</span>
+                        </div>
+                        <div class="project_index_sub">
+                            <ul>
+                                <li>제작 기간 : 2주 / 2024.12</li>
+                                <li>제작 인원 : 3명</li>
+                            </ul>
                         </div>
                         <div class="project_index_tag" data-aos="slide-up" data-aos-duration="3600">
                             <ul>
@@ -107,21 +140,31 @@
                                 </li>
                             </ul>
                         </div>
-                        <div class="project_index_button">
-                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/"
-                                    target="_blank">site ></a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
                 <div class="project_box" d data-aos="fade-in" data-aos-duration="2000">
-                    <div class="project_site">
-                        <a href="#"><img src="img/kb_web.png" alt=""></a>
+                    <div class="project_box_left">
+                        <div class="project_site">
+                            <img src="./img/pc.png" alt="">
+                            <div><img src="./img/kb_web.png" alt=""></div>
+                        </div>
+                        <div class="project_index_button">
+                            <div class="project_btn_site"><a href="#">site></a>
+                            </div>
+                        </div>
                     </div>
+
                     <div class="project_index">
                         <div class="project_index_title">
                             <span>국민은행 리뉴얼</span>
+                        </div>
+                        <div class="project_index_sub">
+                            <ul>
+                                <li>제작 기간 : 2주 / 2024.10</li>
+                                <li>제작 인원 : 2명</li>
+                            </ul>
                         </div>
                         <div class="project_index_tag">
                             <ul>
@@ -136,30 +179,27 @@
                                 <li>
                                     <span>기획</span>
                                     <div class="project_progress">
-                                        <div class="project_progress_inner"></div>
-                                        <span>100%</span>
+                                        <div class="project_progress_inner inner80"></div>
+                                        <span>80%</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span>퍼블리싱</span>
                                     <div class="project_progress">
-                                        <div class="project_progress_inner"></div>
-                                        <span>100%</span>
+                                        <div class="project_progress_inner inner80"></div>
+                                        <span>80%</span>
                                     </div>
                                 </li>
                                 <li>
                                     <span>디자인</span>
                                     <div class="project_progress">
-                                        <div class="project_progress_inner"></div>
-                                        <span>100%</span>
+                                        <div class="project_progress_inner inner80"></div>
+                                        <span>80%</span>
                                     </div>
                                 </li>
                             </ul>
                         </div>
-                        <div class="project_index_button">
-                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/">site></a>
-                            </div>
-                        </div>
+
                     </div>
                 </div>
 
@@ -168,6 +208,9 @@
                 <div class="ab_title" data-aos="slide-right" data-aos-duration="2000">
                     ABOUT.
                 </div>
+
+
+
             </section>
         </main>
         <footer>

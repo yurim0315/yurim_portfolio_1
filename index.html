@@ -8,24 +8,6 @@
     <link rel="stylesheet" href="css/aos.css">
     <script src="js/aos.js"></script>
     <script src="./js/jquery-3.7.1.js"></script>
-    <script>
-        $(function () {
-            // 카드 뒤집는 효과
-            $(document).ready(function () {
-                // 카드 클릭 시 회전
-                $('.skill_box > ul > li').click(function () {
-                    var card = $(this).find('.card');
-                    card.toggleClass('flip');
-                });
-            });
-
-            // 카드 클릭시 설명 뜸
-            $('.card').click(function () {
-                $('.card_inner ').show();
-            });
-        });
-    </script>
-
     <title>CHOIYURIM_PORTPLIO</title>
 </head>
 
@@ -34,14 +16,10 @@
         AOS.init();
 
         // intro 후 home 자동 스크롤
-        // setTimeout(function () {
-        //     const targetElement = document.getElementById('home');
-        //     targetElement.scrollIntoView({ behavior: 'smooth' });
-        // }, 3000);
-
-
-
-
+        setTimeout(function () {
+            const targetElement = document.getElementById('home');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }, 3000);
     </script>
     <div id="logo"><a href="#">
             <a href="mailto:yurim1313@naver.com" title="mail!">
@@ -52,7 +30,7 @@
         <ul>
             <li><a href="#home">HOME</a></li>
             <li><a href="#project">PROJECT</a></li>
-            <li><a href="#about">ABOUT</a></li>
+            <li><a href="#skill">SKILL</a></li>
         </ul>
     </div>
     <div id="wrap">
@@ -86,14 +64,20 @@
                         <div class="project_site">
                             <a href="#"><img src="img/romend_web.png" alt="romend_web"></a>
                         </div>
-                        <div class="project_site_sub">
-                            <div class="project_index_button">
-                                <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/"
-                                        target="_blank">site ></a>
-                                </div>
+                        
+                        <div class="boxbox">
+                            <div class="boxbox1"></div>
+                            <div class="boxbox2"></div>
+                        </div>
+
+                        <div class="project_index_button">
+                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/"
+                                    target="_blank">site ></a>
                             </div>
                         </div>
+
                     </div>
+
                     <div class="project_index">
                         <div class="project_index_title" data-aos="slide-up" data-aos-duration="3300">
                             <span>롬앤 사이트 리뉴얼</span>
@@ -150,6 +134,10 @@
                             <img src="./img/pc.png" alt="">
                             <div><img src="./img/kb_web.png" alt=""></div>
                         </div>
+                        <div class="boxbox">
+                            <div class="boxbox1"></div>
+                            <div class="boxbox2"></div>
+                        </div>
                         <div class="project_index_button">
                             <div class="project_btn_site"><a href="#">site></a>
                             </div>
@@ -204,11 +192,67 @@
                 </div>
 
             </section>
-            <section id="about">
+            <section id="skill">
                 <div class="ab_title" data-aos="slide-right" data-aos-duration="2000">
-                    ABOUT.
+                    SKILL.
                 </div>
+                <div class="skill_box">
+                    <div class="skill_box_inner" data-aos="slide-up" data-aos-duration="1500">
+                        <h1 class="skill_box_inner_title">PUBLISHING</h1>
+                        <ul>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill1.png" alt=""></div>
+                                <div class="skill_text"><span>HTML</span><br>- 시멘틱 태그<br>- 웹표준 준수하여 작성 가능</div>
+                            </li>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill2.png" alt=""></div>
+                                <div class="skill_text"><span>CSS</span><br>- 반응형 사이트 제작 가능<br>- 키프레임을 활용한 역동적인 사이트 제작
+                                    가능</div>
+                            </li>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill3.png" alt=""></div>
+                                <div class="skill_text"><span>Javascript</span><br>- 간단한 함수 사용 가능</div>
+                            </li>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill4.png" alt=""></div>
+                                <div class="skill_text"><span>jQuery</span><br>- 이벤트 함수를 사용하여 역동적인 사이트 제작 가능</div>
+                            </li>
+                        </ul>
+                    </div>
 
+                    <div class="skill_box_inner" data-aos="slide-up" data-aos-duration="1800">
+                        <h1 class="skill_box_inner_title">DESIGN</h1>
+                        <ul>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill7.png" alt=""></div>
+                                <div class="skill_text"><span>PS</span><br>- 이미지 편집, gif이미지 제작 등 가능</div>
+                            </li>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill8.png" alt=""></div>
+                                <div class="skill_text"><span>AI</span><br>- 아이콘, 로고와 같은 백터 이미지 제작 가능</div>
+                            </li>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill9.png" alt=""></div>
+                                <div class="skill_text"><span>FIGMA</span><br>- 디자인, 협업 가능</div>
+                            </li>
+
+                        </ul>
+                    </div>
+
+                    <div class="skill_box_inner" data-aos="slide-up" data-aos-duration="2100">
+                        <h1 class="skill_box_inner_title">TOOL</h1>
+                        <ul>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill5.png" alt=""></div>
+                                <div class="skill_text"><span>GIT</span><br>- 깃을 활용한 협업 가능</div>
+                            </li>
+                            <li>
+                                <div class="skill_img"><img src="./img/skill/skill6.png" alt=""></div>
+                                <div class="skill_text"><span>GITHUB</span><br>- 깃과 연동하여 파일 관리, 협업 가능</div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
 
 
             </section>

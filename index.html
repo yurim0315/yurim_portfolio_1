@@ -17,6 +17,14 @@
 <body>
     <script>
         AOS.init();
+
+        // intro 후 home 자동 스크롤
+        setTimeout(function () {
+            const targetElement = document.getElementById('home');
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }, 3000);
+
+
     </script>
     <div id="logo"><a href="#">
             <a href="mailto:yurim1313@naver.com" title="mail!">
@@ -35,13 +43,21 @@
 
         </header>
         <main>
+            <section id="intro">
+                <h1 class="intro_title">LODING</h1>
+                <div class="intro_progress">
+                    <div class="intro_progress_inner"></div>
+                </div>
+            </section>
+
             <section id="home">
                 <div class="container">
                     <div class="title" data-aos="slide-right" data-aos-duration="1500">CHOI_YURIM</div>
-                    <div class="title lg" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">PORTFOLIO
+                    <div class="title lg" data-aos="fade-right" data-aos-delay="1000" data-aos-duration="2000">-PORTFOLIO-
                     </div>
                 </div>
             </section>
+
             <section id="project">
                 <div class="pj_title" data-aos="slide-right" data-aos-duration="2000">
                     PROJECT.
@@ -49,7 +65,7 @@
 
                 <div class="project_box" data-aos="fade-in" data-aos-duration="2000">
                     <div class="project_site">
-                        <a href="#"><img src="img/123456.png" alt=""></a>
+                        <a href="#"><img src="img/romend_web.png" alt=""></a>
                     </div>
                     <div class="project_index">
                         <div class="project_index_title" data-aos="slide-up" data-aos-duration="3300">
@@ -70,20 +86,30 @@
                             <ul>
                                 <li>
                                     <span>기획</span>
-                                    <div>100%</div>
+                                    <div class="project_progress">
+                                        <div class="project_progress_inner inner80"></div>
+                                        <span>80%</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span>퍼블리싱</span>
-                                    <div>100%</div>
+                                    <div class="project_progress">
+                                        <div class="project_progress_inner"></div>
+                                        <span>100%</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span>디자인</span>
-                                    <div>80%</div>
+                                    <div class="project_progress">
+                                        <div class="project_progress_inner inner80"></div>
+                                        <span>80%</span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="project_index_button">
-                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/">site.</a>
+                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/"
+                                    target="_blank">site ></a>
                             </div>
                         </div>
                     </div>
@@ -91,7 +117,7 @@
 
                 <div class="project_box" d data-aos="fade-in" data-aos-duration="2000">
                     <div class="project_site">
-                        <a href="#"><img src="img/123456.png" alt=""></a>
+                        <a href="#"><img src="img/kb_web.png" alt=""></a>
                     </div>
                     <div class="project_index">
                         <div class="project_index_title">
@@ -109,20 +135,29 @@
                             <ul>
                                 <li>
                                     <span>기획</span>
-                                    <div>80%</div>
+                                    <div class="project_progress">
+                                        <div class="project_progress_inner"></div>
+                                        <span>100%</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span>퍼블리싱</span>
-                                    <div>80%</div>
+                                    <div class="project_progress">
+                                        <div class="project_progress_inner"></div>
+                                        <span>100%</span>
+                                    </div>
                                 </li>
                                 <li>
                                     <span>디자인</span>
-                                    <div>80%</div>
+                                    <div class="project_progress">
+                                        <div class="project_progress_inner"></div>
+                                        <span>100%</span>
+                                    </div>
                                 </li>
                             </ul>
                         </div>
                         <div class="project_index_button">
-                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/">site.</a>
+                            <div class="project_btn_site"><a href="https://yurim0315.github.io/rom-nd_2/">site></a>
                             </div>
                         </div>
                     </div>
